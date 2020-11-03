@@ -1,0 +1,96 @@
+/* TITLE */
+
+.title {
+    color: #e6e8f1;
+    font-family: 'Open Sans', serif;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+/* ABOUT ME */
+
+section about_me {
+    color: #e6e8f1;
+    font-family: 'Open Sans', serif;
+}
+
+h3 {
+    color: #e6e8f1;
+    font-family: 'Open Sans', serif;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 0px;
+    text-decoration: underline;
+}
+
+p1 {
+    color: #e6e8f1;
+    font-family: 'Open Sans', serif;
+    font-size: 15px;
+}
+
+/* BUTTONS */
+
+.buttons {
+    color: #e6e8f1;
+    background-color: inherit;
+    border: none;
+    padding: 0px 0px;
+    font-size: 16px;
+    font-family: 'Open Sans', serif;
+    cursor: pointer;
+    border-color: inherit;
+    font-weight: bold;
+    margin: 0px 10px;
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.buttons:hover,
+.buttons:focus {
+    color: #9c9c9c;
+    outline: none;
+}
+
+/* SEPARATOR */
+
+.separator {
+    display: inline-table;
+    width: 2px;
+    height: 30px;
+    margin-bottom: -10px;
+    background-color: #e6e8f1;
+}
+
+/* IMAGES */
+
+.profile_img img {
+    width: 10%;
+    height: 10%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 50%;
+    border: 4px solid #e6e8f1;
+}
+
+/* LINK TO GAME */
+
+iframe {
+    margin-top: 20px;
+}
