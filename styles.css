@@ -6,14 +6,10 @@ body {
 
 * {
     font-family: 'Open Sans', serif;
+    color: #ffffe0;
 }
 
 /* TITLE */
-
-.title {
-    color: #e6e8f1;
-}
-
 h1 {
     font-size: 40px;
     font-weight: bolder;
@@ -29,13 +25,7 @@ h2 {
 }
 
 /* ABOUT ME */
-
-section about_me {
-    color: #e6e8f1;
-}
-
 h3 {
-    color: #e6e8f1;
     font-size: 30px;
     font-weight: lighter;
     margin-top: 30px;
@@ -45,14 +35,11 @@ h3 {
 }
 
 p1 {
-    color: #e6e8f1;
     font-size: 15px;
 }
 
 /* BUTTONS */
-
 .buttons {
-    color: #e6e8f1;
     background-color: inherit;
     border: none;
     padding: 0px 0px;
@@ -74,17 +61,15 @@ p1 {
 }
 
 /* SEPARATOR */
-
 .separator {
     display: inline-table;
     width: 2px;
-    height: 30px;
-    margin-bottom: -10px;
+    height: 25px;
+    margin-bottom: -5px;
     background-color: #e6e8f1;
 }
 
 /* IMAGES */
-
 .profile_img img {
     width: 10em;
     border-radius: 50%;
@@ -92,7 +77,6 @@ p1 {
 }
 
 /* GAME */
-
 iframe {
     margin-top: 20px;
 }
