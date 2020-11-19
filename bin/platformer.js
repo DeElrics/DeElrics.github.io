@@ -893,13 +893,13 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "194";
+	app.meta.h["build"] = "207";
 	app.meta.h["company"] = "HaxeFlixel";
 	app.meta.h["file"] = "platformer";
 	app.meta.h["name"] = "platformer";
 	app.meta.h["packageName"] = "com.example.myapp";
 	app.meta.h["version"] = "0.0.1";
-	var attributes = { allowHighDPI : false, alwaysOnTop : false, borderless : false, element : null, frameRate : 60, height : 360, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : true, title : "platformer", width : 640, x : null, y : null};
+	var attributes = { allowHighDPI : false, alwaysOnTop : false, borderless : false, element : null, frameRate : 60, height : 720, hidden : false, maximized : false, minimized : false, parameters : { }, resizable : true, title : "platformer", width : 1280, x : null, y : null};
 	attributes.context = { antialiasing : 0, background : 0, colorDepth : 32, depth : true, hardware : true, stencil : true, type : null, vsync : false};
 	if(app.__window == null) {
 		if(config != null) {
@@ -4193,7 +4193,7 @@ openfl_display_Sprite.prototype = $extend(openfl_display_DisplayObjectContainer.
 });
 var Main = function() {
 	openfl_display_Sprite.call(this);
-	this.addChild(new flixel_FlxGame(0,0,PlayState));
+	this.addChild(new flixel_FlxGame(0,0,PlayState,1,60,60,true));
 };
 $hxClasses["Main"] = Main;
 Main.__name__ = "Main";
@@ -8040,7 +8040,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxState.prototype.create.call(this);
 		flixel_FlxG.camera.follow(this.player,flixel_FlxCameraFollowStyle.PLATFORMER);
 		flixel_FlxG.camera.setScrollBoundsRect(0,0,320,180,true);
-		flixel_FlxG.camera.set_zoom(2);
+		flixel_FlxG.camera.set_zoom(4);
 		this.hedgehog_enemies = new flixel_group_FlxTypedGroup();
 		this.ui = new flixel_group_FlxTypedGroup();
 		this.player = new Player();
@@ -71266,7 +71266,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 786024;
+	this.version = 763150;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
