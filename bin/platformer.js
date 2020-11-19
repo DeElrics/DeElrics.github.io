@@ -893,7 +893,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "177";
+	app.meta.h["build"] = "194";
 	app.meta.h["company"] = "HaxeFlixel";
 	app.meta.h["file"] = "platformer";
 	app.meta.h["name"] = "platformer";
@@ -6852,8 +6852,8 @@ var HedgehogEnemy = function(x,y) {
 	this.direction = 1;
 	flixel_FlxSprite.call(this,x,y);
 	this.loadGraphic("assets/images/hedgehog_enemy.png",true,16,16);
-	this.animation.add("idle",[0,1,2,3],8);
-	this.animation.add("run",[4,5,6,7],8);
+	this.animation.add("idle",[0,1,2,3,3,3],8);
+	this.animation.add("run",[4,5,5,6,7,7],8);
 	this.animation.add("jump",[8]);
 	this.animation.add("fall",[9]);
 	this.setSize(4,8);
@@ -7049,7 +7049,7 @@ ManifestResources.init = function(config) {
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$nokiafc22_$ttf);
 	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$flixel_$fonts_$monsterrat_$ttf);
 	var bundle;
-	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y23:assets%2Fdata%2Fmap.tmxR2i5001R3R4R5R7R6tgoR0y36:assets%2Fimages%2Fhedgehog_enemy.pngR2i895R3y5:IMAGER5R8R6tgoR0y36:assets%2Fimages%2Fimages-go-here.txtR2zR3R4R5R10R6tgoR0y28:assets%2Fimages%2Fplayer.pngR2i996R3R9R5R11R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i1850R3R9R5R12R6tgoR0y36:assets%2Fmusic%2Fmusic-goes-here.txtR2zR3R4R5R13R6tgoR0y36:assets%2Fsounds%2Fsounds-go-here.txtR2zR3R4R5R14R6tgoR2i2114R3y5:MUSICR5y26:flixel%2Fsounds%2Fbeep.mp3y9:pathGroupaR16y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R15R5y28:flixel%2Fsounds%2Fflixel.mp3R17aR19y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3y5:SOUNDR5R18R17aR16R18hgoR2i33629R3R21R5R20R17aR19R20hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R22R23y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R9R5R28R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R9R5R29R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
+	var data = "{\"name\":null,\"assets\":\"aoy4:pathy34:assets%2Fdata%2Fdata-goes-here.txty4:sizezy4:typey4:TEXTy2:idR1y7:preloadtgoR0y23:assets%2Fdata%2Fmap.tmxR2i4888R3R4R5R7R6tgoR0y36:assets%2Fimages%2Fhedgehog_enemy.pngR2i833R3y5:IMAGER5R8R6tgoR0y36:assets%2Fimages%2Fimages-go-here.txtR2zR3R4R5R10R6tgoR0y28:assets%2Fimages%2Fplayer.pngR2i964R3R9R5R11R6tgoR0y27:assets%2Fimages%2Ftiles.pngR2i1906R3R9R5R12R6tgoR0y36:assets%2Fmusic%2Fmusic-goes-here.txtR2zR3R4R5R13R6tgoR0y36:assets%2Fsounds%2Fsounds-go-here.txtR2zR3R4R5R14R6tgoR2i2114R3y5:MUSICR5y26:flixel%2Fsounds%2Fbeep.mp3y9:pathGroupaR16y26:flixel%2Fsounds%2Fbeep.ogghR6tgoR2i39706R3R15R5y28:flixel%2Fsounds%2Fflixel.mp3R17aR19y28:flixel%2Fsounds%2Fflixel.ogghR6tgoR2i5794R3y5:SOUNDR5R18R17aR16R18hgoR2i33629R3R21R5R20R17aR19R20hgoR2i15744R3y4:FONTy9:classNamey35:__ASSET__flixel_fonts_nokiafc22_ttfR5y30:flixel%2Ffonts%2Fnokiafc22.ttfR6tgoR2i29724R3R22R23y36:__ASSET__flixel_fonts_monsterrat_ttfR5y31:flixel%2Ffonts%2Fmonsterrat.ttfR6tgoR0y33:flixel%2Fimages%2Fui%2Fbutton.pngR2i519R3R9R5R28R6tgoR0y36:flixel%2Fimages%2Flogo%2Fdefault.pngR2i3280R3R9R5R29R6tgh\",\"rootPath\":null,\"version\":2,\"libraryArgs\":[],\"libraryType\":null}";
 	var manifest = lime_utils_AssetManifest.parse(data,ManifestResources.rootPath);
 	var library = lime_utils_AssetLibrary.fromManifest(manifest);
 	lime_utils_Assets.registerLibrary("default",library);
@@ -8055,7 +8055,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 			flixel_FlxG.game._resetGame = true;
 		}
 		flixel_FlxState.prototype.update.call(this,elapsed);
-		if(flixel_FlxG.overlap(this.hedgehog_enemies,this.player)) {
+		if(flixel_FlxG.overlap(this.hedgehog_enemies,this.player) && this.player.lives != 0) {
 			this.player.hit();
 		}
 		flixel_FlxG.overlap(this.player,this.map,null,flixel_FlxObject.separate);
@@ -8073,8 +8073,8 @@ var Player = function() {
 	this._can_jump = 0.0;
 	flixel_FlxSprite.call(this);
 	this.loadGraphic("assets/images/player.png",true,16,16);
-	this.animation.add("idle",[0,1,2,3],8);
-	this.animation.add("run",[4,5,6,7],8);
+	this.animation.add("idle",[0,1,2,3,3,3],8);
+	this.animation.add("run",[4,5,5,6,7,7],8);
 	this.animation.add("jump",[8]);
 	this.animation.add("fall",[9]);
 	this.animation.add("hit",[9]);
@@ -8083,7 +8083,7 @@ var Player = function() {
 	this.offset.set(6,8);
 	this.drag.set_x(1200.0);
 	this.acceleration.set_y(400.0);
-	this.maxVelocity.set(100.0,400);
+	this.maxVelocity.set(80.0,400);
 };
 $hxClasses["Player"] = Player;
 Player.__name__ = "Player";
@@ -71266,7 +71266,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 808867;
+	this.version = 786024;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -113879,7 +113879,8 @@ openfl_text_Font.__registeredFonts = [];
 Player._GRAVITY = 400.0;
 Player._DECELERATION = 1200.0;
 Player._ACCELERATION = 1200.0;
-Player._RUN_SPEED = 100.0;
+Player._RUN_SPEED = 80.0;
+Player._CROUCH_SPEED = 40.0;
 Player._JUMP_FORCE = -170.0;
 Player._MAX_FALLSPEED = 400;
 Xml.Element = 0;
