@@ -1,80 +1,94 @@
-body {
-    /* background-image: url("img/background.png"); */
-    background-color: #1c1e22;
-    background-repeat: repeat-x;
-}
-
 * {
-    font-family: 'Open Sans', serif;
-    color: #ffffe0;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+  color: whitesmoke;
+  text-shadow: 4px 4px #111111;
 }
 
-/* TITLE */
-h1 {
-    font-size: 40px;
-    font-weight: bolder;
-    margin-bottom: 0px;
+a {
+  text-decoration: none;
 }
 
-h2 {
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    font-weight: bolder;
+#profileimg {
+  position: relative;
+
+  margin-top: 40px;
+  margin-bottom: 10px;
+  width: 250px;
+  height: 250px;
+
+  border: 7px solid whitesmoke;
+  border-radius: 50%;
+  box-shadow: 4px 4px #111111;
+
+  transition: transform 250ms;
 }
 
-/* ABOUT ME */
-h3 {
-    font-size: 30px;
-    font-weight: lighter;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    padding: 0px;
+#profileimg:hover {
+  transform: scale(1.1) rotateZ(7deg)
 }
 
-p1 {
-    font-size: 15px;
+#header {
+  font-size: 48px;
 }
 
-/* BUTTONS */
+#description {
+  font-size: 20px;
+  padding-bottom: 14px;
+}
+
+.headers {
+  padding-top: 20px;
+  font-size: 32px;
+}
+
 .buttons {
-    background-color: inherit;
-    border: none;
-    padding: 0px 0px;
-    font-size: 16px;
-    cursor: pointer;
-    border-color: inherit;
-    font-weight: bold;
-    margin: 0px 10px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+  transition: transform 250ms;
 }
 
-.buttons a {
-    text-decoration: none;
-}
-
-.buttons:hover,
 .buttons:focus {
-    color: #9c9c9c;
-    outline: none;
+  color: #909090;
+  outline: none;
+  transform: scale(0.9)
 }
 
-/* SEPARATOR */
+.buttons:hover {
+  color: #909090;
+  outline: none;
+  transform: scale(1.1);
+}
+
 .separator {
-    display: inline-table;
-    width: 2px;
-    height: 25px;
-    margin-bottom: -5px;
-    background-color: #e6e8f1;
+  display: inline-table;
+
+  margin-bottom: -2px;
+  width: 3px;
+  height: 18px;
+
+  background-color: whitesmoke;
+  box-shadow: 4px 4px #111111;
 }
 
-/* IMAGES */
-.profile_img img {
-    width: 10em;
-    border-radius: 50%;
-    border: 4px solid #e6e8f1;
-}
+#gameframe {
+  margin-top: 20px;
+  margin-bottom: 100px;
 
-/* GAME */
-iframe {
-    margin-top: 20px;
+  width: 968px;
+  height: 548px;
+
+  overflow: hidden;
+
+  border: none;
+  border-radius: 0.3%;
 }

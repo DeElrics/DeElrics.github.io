@@ -2,109 +2,59 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
-    <title>deelric</title>
+    <title>Elric</title>
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body>
-
+<body bgcolor="#1b1b1b">
     <center>
+        <img id="profileimg" src="img/pfp.png">
+        <header class="headers" id="header">Elric</header>
+        <p id="description">"Game Developer"</p>
 
-        <div class="title">
+        <a href="https://github.com/DeElrics" target="_blank">
+            <button type="button" class="buttons">github</button>
+        </a>
 
-            <div class="profile_img">
-                <img src="img/hedgehog-pic.jpg">
-            </div>
+        <div class="separator"></div>
 
-            <h1>
-                Elric
-            </h1>
+        <a href="https://3lric.itch.io/" target="_blank">
+            <button type="button" class="buttons">itch.io</button>
+        </a>
 
-            <h2>
-                "Indie" Game Developer
-            </h2>
+        <div class="separator"></div>
 
-        </div>
+        <a href="https://www.youtube.com/channel/UCEsb9YnvKmS_ECmS0MzHkZg" target="_blank">
+            <button type="button" class="buttons">youtube</button>
+        </a>
 
-        <div class="buttons" style="width: 280px;">
+        <header class="headers" id="aboutme">About Me</header>
+        <p>
+            Hi, my name is Elric I'm a 15 year old wannabe game developer. <br>
+            I'm currently working a game about a hedgehog in a mysterious environment. <br>
+            I haven't come up with anything else yet. <br>
+            I mainly work with java, html5, css, and c# with the Unity game engine. <br>
+        </p>
 
-            <a href="https://github.com/DeElrics" target="_blank">
-                <button type="button" class="buttons">GITHUB</button>
-            </a>
+        <header class="headers" id="dream">My Dream</header>
+        <p>
+            My current dream is to either become a game developer working for a small studio <br>
+            or an indie game developer working with a very small team.
+        </p>
 
-            <div class="separator"></div>
+        <header class="headers" id="game">Prototype Game</header>
+        <p>
+            This is a very early test prototype I'm working on in javascript, html and css. <br>
+            Use wasd to move around, sorry for the rubbish movement.
+        </p>
 
-            <a href="https://www.youtube.com/channel/UCEsb9YnvKmS_ECmS0MzHkZg" target="_blank">
-                <button type="button" class="buttons">YOUTUBE</button>
-            </a>
-
-            <div class="separator"></div>
-
-            <a href="https://3lric.itch.io/" target="_blank">
-                <button type="button" class="buttons">ITCH.IO</button>
-            </a>
-
-        </div>
-
-        <section aboutMe>
-            <h3>
-                <b>ABOUT ME</b>
-            </h3>
-
-                <p>
-                    Hi my name is Elric, I'm 15 years old and I wanna be a game developer.
-                </p>
-                <p>
-                    I am currently developing a few prototypes in the Java programming language <br>
-                    with the libgdx game framework, <br>
-                    my current goal isn't to finish any of the games it's to learn.<br>
-                </p>
-                <p>
-                    I use Intellij ide as my ide and mainly
-                    work in the Java, html5 and css.
-                </p>
-                <p>
-                    This is the prototype I created in the Haxe programming language with the haxeflixel framework/engine.
-                </p>
-                <p>
-                    <b>CONTROLS                            </b> <br>
-                    <i>LEFT ARROW KEY : </i> <b> move left </b> <br>
-                    <i>RIGHT ARROW KEY :</i> <b> move right</b> <br>
-                    <i>UP ARROW KEY :   </i> <b> jump      </b> <br>
-                    <i>R :              </i> <b> restart   </b> <br>
-                </p>
-        </section>
-
-        <iframe src="bin/index.html" width="1280" height="720"></iframe>
+        <iframe id="gameframe" src="game/index.html" scrolling="no"></iframe>
     </center>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
 </body>
 
 </html>
