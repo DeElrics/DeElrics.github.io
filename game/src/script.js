@@ -1,20 +1,17 @@
-import Player from './player.js'
+import GameScene from "./gameScene.js";
+import Player from "./player.js";
 
-let canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+let canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const player = new Player((canvas.width / 2) - 25, (canvas.height / 2) - 25);
+const currentScene = new GameScene(ctx);
 
 function draw() {
-    requestAnimationFrame(draw);
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+	currentScene.draw(ctx);
 
-    ctx.beginPath();
-    player.draw(ctx);
-    ctx.fill();
-
-    player.update();
+	requestAnimationFrame(draw);
 }
 
 draw();

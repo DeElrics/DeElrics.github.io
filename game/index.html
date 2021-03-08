@@ -2,17 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Game</title>
 
-    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<link rel="shortcut icon" href="#">
 </head>
 
 <body bgcolor="#141414">
-    <canvas id="canvas" width="960" height="540"></canvas>
+	<center>
+		<h1 id="mainheader">Javascript game!</h1>
 
-    <script src="src/script.js" type="module"></script>
+		<div id="game">
+			<canvas id="canvas" width="960" height="540"></canvas>
+			
+			<div id="scripts">
+				<script src="src/script.js" type="module"></script>
+			</div>
+			
+			<div id="images">
+				<img class="pixelart" id="playerimage" src="img/hedgehog.png">
+			</div>
+		</div>
+	</center>
 </body>
 
 </html>
