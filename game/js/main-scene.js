@@ -2,21 +2,14 @@ import Player from './player.js';
 import Enemy from './enemy.js';
 import { randomRangeInt } from './script.js';
 
-class MainScene extends Phaser.Scene {
+export default class MainScene extends Phaser.Scene {
 	constructor() {
 		super('MainScene');
-		this.deltaTime, this.cursors, this.ground, this.player, this.scoreText;
+	}
 
-		this.timer = 180;
-		this.score;
-
-		this.enemies = [];
-		this.enemySpawnTimer = 180;
-
+	preload() {
 		this.background = {
 			sky: {
-				image: undefined,
-				tile: undefined,
 				pos: {
 					x: 0,
 					y: 0,
@@ -24,8 +17,6 @@ class MainScene extends Phaser.Scene {
 				scrollSpeed: 0.4,
 			},
 			ground: {
-				image: undefined,
-				tile: undefined,
 				pos: {
 					x: 0,
 					y: 0,
@@ -33,10 +24,11 @@ class MainScene extends Phaser.Scene {
 				scrollSpeed: 0.8,
 			},
 		};
-	}
 
-	preload() {
 		this.score = 0;
+		this.timer = 180;
+		this.enemySpawnTimer = 180;
+		this.enemies = [];
 
 		this.background.sky.image = this.load.image('sky', 'img/background.png');
 		this.background.ground.image = this.load.image('ground', 'img/ground.png');
@@ -115,5 +107,3 @@ class MainScene extends Phaser.Scene {
 		}
 	}
 }
-
-export default MainScene;
