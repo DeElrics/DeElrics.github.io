@@ -6,7 +6,7 @@ class Player {
 			x: x,
 			y: y,
 		};
-		this.jumpForce = -220;
+		this.jumpForce = -190;
 		this.collider;
 		this.sheet = this.scene.load.spritesheet('playerSheet', 'img/player/hedgehog-sheet.png', { frameWidth: 16, frameHeight: 16 });
 	}
@@ -27,8 +27,8 @@ class Player {
 
 		// Create collider and rendering image to it
 		this.collider = this.scene.physics.add.sprite(this.pos.x, this.pos.y, 'playerSheet');
-		this.collider.body.setSize(4, 8);
-		this.collider.body.offset = { x: 6, y: 8 };
+		this.collider.body.setSize(8, 8);
+		this.collider.body.offset = { x: 4, y: 8 };
 	}
 
 	jump() {
@@ -39,9 +39,18 @@ class Player {
 
 	update() {
 		// Jump
+		// Keyboard input
 		if (this.scene.cursors.space.isDown) {
 			this.jump();
 		}
+		// Touch input
+		this.scene.input.on(
+			'pointerdown',
+			function (pointer) {
+				this.jump();
+			},
+			this
+		);
 
 		// Switch animations
 		if (this.collider.body.touching.down) {
@@ -57,6 +66,9 @@ class Player {
 		this.isDead = true;
 		this.collider.destroy();
 		delete this;
-		location.reload();
+		//window.alert('You lost! You ran ' + Math.round(this.scene.score) / 10 + ' meeters.');
+		this.scene.scene.start('OverScene');
 	}
 }
+
+export default Player;

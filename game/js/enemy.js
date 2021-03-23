@@ -6,7 +6,7 @@ class Enemy {
 			x: x,
 			y: y,
 		};
-		this.speed = -180;
+		this.speed = -this.scene.timer;
 		this.collider;
 		this.sheet = this.scene.load.spritesheet('enemySheet', 'img/enemy/hedgehog-brown-sheet.png', { frameWidth: 16, frameHeight: 16 });
 	}
@@ -28,8 +28,8 @@ class Enemy {
 			this.collider.setVelocityX(this.speed);
 
 			// Set scale and offset
-			this.collider.body.setSize(4, 8);
-			this.collider.body.offset = { x: 6, y: 8 };
+			this.collider.body.setSize(8, 8);
+			this.collider.body.offset = { x: 4, y: 8 };
 
 			this.scene.physics.add.collider(this.collider, this.scene.platform);
 
@@ -37,3 +37,5 @@ class Enemy {
 		}
 	}
 }
+
+export default Enemy;

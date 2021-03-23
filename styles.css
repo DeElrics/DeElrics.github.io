@@ -1,94 +1,94 @@
 * {
-  padding: 0;
-  margin: 0;
-  font-family: 'Roboto';
-  color: whitesmoke;
-  text-shadow: 4px 4px #111111;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto';
+	color: whitesmoke;
+	text-shadow: 4px 4px #111111;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 #profileimg {
-  position: relative;
+	position: relative;
 
-  margin-top: 40px;
-  margin-bottom: 10px;
-  width: 250px;
-  height: 250px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	width: 250px;
+	height: 250px;
 
-  border: 7px solid whitesmoke;
-  border-radius: 50%;
-  box-shadow: 4px 4px #111111;
+	border: 7px solid whitesmoke;
+	border-radius: 50%;
+	box-shadow: 4px 4px #111111;
 
-  transition: transform 250ms;
+	transition: transform 250ms;
 }
 
 #profileimg:hover {
-  transform: scale(1.1) rotateZ(7deg)
+	transform: scale(1.1) rotateZ(7deg);
 }
 
 #header {
-  font-size: 48px;
+	font-size: 48px;
 }
 
 #description {
-  font-size: 20px;
-  padding-bottom: 14px;
+	font-size: 20px;
+	padding-bottom: 14px;
 }
 
 .headers {
-  padding-top: 20px;
-  font-size: 32px;
+	padding-top: 20px;
+	font-size: 32px;
 }
 
 .buttons {
-  background-color: inherit;
-  border: none;
-  cursor: pointer;
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
 
-  font-size: 18px;
-  font-weight: bold;
+	font-size: 18px;
+	font-weight: bold;
 
-  margin-left: 10px;
-  margin-right: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
 
-  transition: transform 250ms;
+	transition: transform 250ms;
 }
 
 .buttons:focus {
-  color: #909090;
-  outline: none;
-  transform: scale(0.9)
+	color: #909090;
+	outline: none;
+	transform: scale(0.9);
 }
 
 .buttons:hover {
-  color: #909090;
-  outline: none;
-  transform: scale(1.1);
+	color: #909090;
+	outline: none;
+	transform: scale(1.1);
 }
 
 .separator {
-  display: inline-table;
+	display: inline-table;
 
-  margin-bottom: -2px;
-  width: 3px;
-  height: 18px;
+	margin-bottom: -2px;
+	width: 3px;
+	height: 18px;
 
-  background-color: whitesmoke;
-  box-shadow: 4px 4px #111111;
+	background-color: whitesmoke;
+	box-shadow: 4px 4px #111111;
 }
 
 #gameframe {
-  margin-top: 20px;
-  margin-bottom: 100px;
+	margin-top: 20px;
+	margin-bottom: 100px;
 
-  width: 968px;
-  height: 548px;
+	width: 968px;
+	height: 548px;
 
-  overflow: hidden;
+	overflow: hidden;
 
-  border: none;
-  border-radius: 0.3%;
+	border: none;
+	border-radius: 0.3%;
 }
