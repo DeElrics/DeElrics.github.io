@@ -55,7 +55,7 @@ export default class MainScene extends Phaser.Scene {
 		this.background.ground.tile = this.add.tileSprite(this.background.ground.pos.x, this.background.ground.pos.y, this.background.ground.image.width, this.background.ground.image.height, 'ground').setOrigin(0, 0);
 
 		// Draw text
-		this.scoreText = this.add.text(20, 5, ':D', {
+		this.scoreText = this.add.text(20, 5, 'SCORE: ...', {
 			fontFamily: 'pixel font',
 			fontSize: 9,
 		});

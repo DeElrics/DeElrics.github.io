@@ -66,7 +66,6 @@ class Player {
 		this.isDead = true;
 		this.collider.destroy();
 		delete this;
-		//window.alert('You lost! You ran ' + Math.round(this.scene.score) / 10 + ' meeters.');
 		this.scene.scene.start('OverScene');
 	}
 }

@@ -1,3 +1,12 @@
+// TODO: Different maps && draw all different tilesets
+// TODO: Different characters && draw all sprites
+// TODO: Sonic skin at 1k meeters ran
+// TODO: Improve UI
+// TODO: Shop menu && save all data
+// TODO: Settings menu
+// TODO: Fine tune mechanics
+// TODO: Add highscore
+
 import MenuScene from './menu-scene.js';
 import MainScene from './main-scene.js';
 import OverScene from './over-scene.js';
