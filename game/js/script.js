@@ -6,6 +6,7 @@
 // TODO: Settings menu
 // TODO: Fine tune mechanics
 // TODO: Add highscore
+// TODO: Shooting
 
 import MenuScene from './menu-scene.js';
 import MainScene from './main-scene.js';

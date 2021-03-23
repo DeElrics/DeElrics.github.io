@@ -7,7 +7,6 @@ class Player {
 			y: y,
 		};
 		this.jumpForce = -190;
-		this.collider;
 		this.sheet = this.scene.load.spritesheet('playerSheet', 'img/player/hedgehog-sheet.png', { frameWidth: 16, frameHeight: 16 });
 	}
 
@@ -37,6 +36,10 @@ class Player {
 		}
 	}
 
+	shoot() {
+		console.log('shoot');
+	}
+
 	update() {
 		// Jump
 		// Keyboard input
@@ -47,7 +50,11 @@ class Player {
 		this.scene.input.on(
 			'pointerdown',
 			function (pointer) {
-				this.jump();
+				if (pointer.x < this.scene.sys.game.canvas.width / 2) {
+					this.jump();
+				} else if (pointer.x > this.scene.sys.game.canvas.width / 2) {
+					this.shoot();
+				}
 			},
 			this
 		);
