@@ -8,19 +8,17 @@
 // TODO: Add highscore
 // TODO: Shooting
 
-import MenuScene from './menu-scene.js';
-import MainScene from './main-scene.js';
-import OverScene from './over-scene.js';
-
-export function randomRangeInt(min, max) {
-	return Math.floor(Math.random() * (max - min)) + min;
-}
+// Import scenes
+import MenuScene from './scenes/menu-scene.js';
+import MainScene from './scenes/main-scene.js';
+import OverScene from './scenes/over-scene.js';
+import LoadScene from './scenes/load-scene.js';
 
 let config = {
 	type: Phaser.CANVAS,
 	width: 320,
 	height: 180,
-	backgroundColor: '#1a1a1a',
+	backgroundColor: '#11181c',
 	pixelArt: true,
 	scale: {
 		zoom: 3,
@@ -35,7 +33,7 @@ let config = {
 			debug: false,
 		},
 	},
-	scene: [MenuScene, MainScene, OverScene],
+	scene: [LoadScene, MenuScene, MainScene, OverScene],
 };
 
 let game = new Phaser.Game(config);
