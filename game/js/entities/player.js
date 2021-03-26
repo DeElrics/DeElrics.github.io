@@ -6,7 +6,7 @@ export default class Player {
 			x: x,
 			y: y,
 		};
-		this.jumpForce = -170;
+		this.jumpForce = -175;
 	}
 
 	create() {
