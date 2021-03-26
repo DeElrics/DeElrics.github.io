@@ -32,7 +32,7 @@ let config = {
 				y: 800,
 			},
 			fps: 60,
-			debug: true,
+			debug: false,
 		},
 	},
 	scene: [LoadScene, MenuScene, MainScene, OverScene],
