@@ -22,7 +22,8 @@ export default class MainScene extends Phaser.Scene {
 					x: 0,
 					y: 0,
 				},
-				scrollSpeed: 0.8,
+				// 0.8
+				scrollSpeed: 100,
 			},
 		};
 
@@ -53,7 +54,7 @@ export default class MainScene extends Phaser.Scene {
 		// Draw text
 		this.scoreText = this.add.text(20, 5, 'SCORE: ...', {
 			fontFamily: 'pixel font',
-			fontSize: 16,
+			fontSize: 17,
 		});
 		this.scoreText.setShadow(2, 1, 'rgba(0, 0, 0, 1)', 0);
 	}
@@ -89,16 +90,26 @@ export default class MainScene extends Phaser.Scene {
 				// Kill player
 				let that = this;
 				if (this.enemies.length > 0) {
-					this.physics.add.overlap(this.player.collider, this.enemies[i].collider, function () {
+					this.physics.add.overlap(this.player.collider, this.enemies[i].collider, () => {
 						that.player.kill();
 					});
 				}
 			}
 
 			// Scroll background
+			/*
 			this.background.ground.scrollSpeed += 0.009 * deltaToMS;
 			this.backgroundTile.tilePositionX += this.background.sky.scrollSpeed;
 			this.groundTile.tilePositionX += this.background.ground.scrollSpeed;
+			*/
+
+			// Change this
+			if (this.background.ground.scrollSpeed <= 400) this.background.ground.scrollSpeed += this.timer / 30000;
+
+			console.log(Math.round(this.background.ground.scrollSpeed), Math.round(this.timer));
+
+			this.backgroundTile.tilePositionX += this.background.sky.scrollSpeed;
+			this.groundTile.tilePositionX += this.background.ground.scrollSpeed * deltaToMS;
 		} else {
 			this.enemies = [];
 			window.localStorage.setItem('score', this.score);

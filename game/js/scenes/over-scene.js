@@ -14,11 +14,18 @@ export default class OverScene extends Phaser.Scene {
 			.setInteractive()
 			.on(
 				Phaser.Input.Events.GAMEOBJECT_POINTER_UP,
-				function () {
+				() => {
 					this.scene.start('MenuScene');
 				},
 				this
 			);
+
+		// Draw text
+		this.scoreText = this.add.text(20, 5, 'SCORE: ' + Math.round(window.localStorage.getItem('score')), {
+			fontFamily: 'pixel font',
+			fontSize: 17,
+		});
+		this.scoreText.setShadow(2, 1, 'rgba(0, 0, 0, 1)', 0);
 
 		speedhog.play('speedhogAnim');
 		menuButton.play('menuAnim');

@@ -35,7 +35,7 @@ export default class LoadScene extends Phaser.Scene {
 		// text
 		this.studio = this.add.text(this.sys.game.canvas.width / 2 - 52, 70, 'ELRIC STUDIOS', {
 			fontFamily: 'pixel font',
-			fontSize: 16,
+			fontSize: 17,
 		});
 		this.studio.setShadow(2, 1, 'rgba(0, 0, 0, 1)', 0);
 		this.studio.alpha = 0;
@@ -53,8 +53,12 @@ export default class LoadScene extends Phaser.Scene {
 			if (this.studio.alpha === 1) this.changeAlpha = true;
 		} else if (this.changeAlpha) this.studio.alpha -= 0.8 * deltaToMS;
 
-		// Start game
+		this.input.on('pointerdown', () => {
+			this.scene.start('MenuScene');
+		});
+
 		if (this.timer <= 0) {
+			// Start game
 			this.scene.start('MenuScene');
 		}
 	}

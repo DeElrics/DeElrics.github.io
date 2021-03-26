@@ -7,6 +7,7 @@
 // TODO: Fine tune mechanics
 // TODO: Add highscore
 // TODO: Shooting
+// TODO: Change background speed!!!!!!!!
 
 // Import scenes
 import MenuScene from './scenes/menu-scene.js';
@@ -30,7 +31,8 @@ let config = {
 			gravity: {
 				y: 800,
 			},
-			debug: false,
+			fps: 60,
+			debug: true,
 		},
 	},
 	scene: [LoadScene, MenuScene, MainScene, OverScene],

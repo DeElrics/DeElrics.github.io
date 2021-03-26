@@ -12,7 +12,7 @@ export default class MenuScene extends Phaser.Scene {
 			.setInteractive()
 			.on(
 				Phaser.Input.Events.GAMEOBJECT_POINTER_UP,
-				function () {
+				() => {
 					this.scene.start('MainScene');
 				},
 				this
@@ -22,7 +22,7 @@ export default class MenuScene extends Phaser.Scene {
 			.setInteractive()
 			.on(
 				Phaser.Input.Events.GAMEOBJECT_POINTER_UP,
-				function () {
+				() => {
 					window.localStorage.clear();
 					scoreText.text = 'SCORE: 0';
 				},
@@ -37,7 +37,7 @@ export default class MenuScene extends Phaser.Scene {
 		// Draw text
 		let scoreText = this.add.text(20, 5, 'SCORE: ' + Math.round(window.localStorage.getItem('score')), {
 			fontFamily: 'pixel font',
-			fontSize: 16,
+			fontSize: 17,
 		});
 		scoreText.setShadow(2, 1, 'rgba(0, 0, 0, 1)', 0);
 	}

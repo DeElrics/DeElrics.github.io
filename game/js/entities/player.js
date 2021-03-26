@@ -1,4 +1,4 @@
-class Player {
+export default class Player {
 	constructor(x, y, scene) {
 		this.scene = scene;
 		this.isDead = false;
@@ -13,8 +13,8 @@ class Player {
 		// Create collider and rendering image to it
 		this.collider = this.scene.physics.add.sprite(this.pos.x, this.pos.y, 'playerSheet');
 		// Set scale and offset
-		this.collider.body.setSize(11, 11);
-		this.collider.body.offset = { x: 2, y: 5 };
+		this.collider.body.setSize(9, 11);
+		this.collider.body.offset = { x: 4, y: 5 };
 	}
 
 	jump() {
@@ -32,7 +32,7 @@ class Player {
 		// Touch input
 		this.scene.input.on(
 			'pointerdown',
-			function (pointer) {
+			pointer => {
 				this.jump();
 				/*
 				if (pointer.x < this.scene.sys.game.canvas.width / 2) {
@@ -61,5 +61,3 @@ class Player {
 		delete this;
 	}
 }
-
-export default Player;
