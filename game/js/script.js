@@ -1,19 +1,13 @@
 // TODO: Different maps && draw all different tilesets
-// TODO: Different characters && draw all sprites
-// TODO: Sonic skin at 1k meeters ran
-// TODO: Improve UI
-// TODO: Shop menu && save all data
-// TODO: Settings menu
-// TODO: Fine tune mechanics
 // TODO: Add highscore
-// TODO: Shooting
-// TODO: Change background speed!!!!!!!!
 
 // Import scenes
 import MenuScene from './scenes/menu-scene.js';
 import MainScene from './scenes/main-scene.js';
 import OverScene from './scenes/over-scene.js';
 import LoadScene from './scenes/load-scene.js';
+import SettingScene from './scenes/setting-scene.js';
+import ShopScene from './scenes/shop-scene.js';
 
 let config = {
 	type: Phaser.CANVAS,
@@ -35,7 +29,7 @@ let config = {
 			debug: false,
 		},
 	},
-	scene: [LoadScene, MenuScene, MainScene, OverScene],
+	scene: [LoadScene, MenuScene, MainScene, OverScene, SettingScene, ShopScene],
 };
 
 let game = new Phaser.Game(config);

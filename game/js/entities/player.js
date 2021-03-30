@@ -1,63 +1,41 @@
 export default class Player {
-	constructor(x, y, scene) {
+	constructor(jumpForce, [w, h], [x, y], scene) {
 		this.scene = scene;
-		this.isDead = false;
-		this.pos = {
-			x: x,
-			y: y,
-		};
-		this.jumpForce = -175;
-	}
+		let sprite = scene.physics.add.sprite(20, 136, 'hogSheet');
 
-	create() {
-		// Create collider and rendering image to it
-		this.collider = this.scene.physics.add.sprite(this.pos.x, this.pos.y, 'playerSheet');
-		// Set scale and offset
-		this.collider.body.setSize(9, 11);
-		this.collider.body.offset = { x: 4, y: 5 };
+		sprite.body.setSize(w, h);
+		sprite.body.offset = { x: x, y: y };
+		this.sprite = sprite;
+		this.isDead = false;
+		this.jumpForce = jumpForce;
 	}
 
 	jump() {
-		if (this.collider.body.touching.down) {
-			this.collider.setVelocityY(this.jumpForce);
+		if (this.sprite.body.touching.down) {
+			this.sprite.setVelocityY(this.jumpForce);
 		}
 	}
-
-	shoot() {}
 
 	update(deltaInMS) {
 		if (this.scene.cursors.space.isDown) {
 			this.jump();
 		}
-		// Touch input
 		this.scene.input.on(
 			'pointerdown',
-			pointer => {
+			() => {
 				this.jump();
-				/*
-				if (pointer.x < this.scene.sys.game.canvas.width / 2) {
-					this.jump();
-				} else if (pointer.x > this.scene.sys.game.canvas.width / 2) {
-					this.shoot();
-				}
-				*/
 			},
 			this
 		);
 
-		// Switch animations
-		if (this.collider.body.touching.down) {
-			this.collider.anims.play('playerRunAnimation', true);
-		} else {
-			this.collider.anims.play('playerJumpAnimation', true);
-		}
+		this.updateSprite();
 
-		this.scene.physics.add.collider(this.collider, this.scene.platform);
+		this.scene.physics.add.collider(this.sprite, this.scene.platform);
 	}
 
 	kill() {
 		this.isDead = true;
-		this.collider.destroy();
+		this.sprite.destroy();
 		delete this;
 	}
 }
